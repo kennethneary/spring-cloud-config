@@ -6,8 +6,6 @@ services:
             context: ../
             dockerfile: docker/Dockerfile.server
         image: config-server:latest
-#        expose:
-#            - 8888
         ports:
             - 8888:8888
         networks:
