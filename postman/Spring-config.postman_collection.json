@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "91294742-b327-44b7-ab95-7e716cd8d481",
+		"name": "Spring-config",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "server",
+			"item": [
+				{
+					"name": "decrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "AgArDWOkaBTsOOxInsyIavkVTVrN4cPhjoWz8Fo9TEBG+/mHltkZ0s/6n9WOmNu7zr7m1HOcUNZhK9AUK8OcYZOthDrp04OEotvPZa5j9rzlvfyGi7OcPBjjPTu4VUBRYeJTXVRtblsnAglO4PZCaTahPilFrZp/BoD+Mxn9eSLAhQNs+NZezyDOtmb37odHx5H5wODsOzyiC8Hx+0DozKwpefl9hzwsQO/bFGMFoFgnfKu8xgPWXfgPgSMXSX+w0k1ss3dHGYx81DUxa2JhAPGi5HGmFesDJLGLwQzCbUi9onGNXJRU2WdgzfHJ1ZwJt22lUFXdUoc+amcIUMiH+Aggd+N6f/qEaIgxKi5s4nO26dfldNwWMY80bqZ5sXW8cCa5wdwSwSUudLZFNbEz8lw5yRy846kYPHqJ6kvbFQIetyoTSuEPP8eWlCjrDjMtiu17yPzFPBWeNPvEbrlp0Vfycn8EMa78CkgUHvqWz0pjb1IL2poCaHH+7hRzoQwgsz5mBjOvmqn5nA41bKfY20mlSOodXX7V5b0MG5Ju8Mv+x7I1OC6zOGdhj5KSHX2H+IAI22d1BEGNqwmSd0cy6hyRUs0tIAyFwIitFkMwOz+7l0cuSDjMUdCQ7XiVfmO1yyI3+gbyIA+fwKrNSd3EH3c/yyCeUbUX7WFR+NBiVghexjTNmD3eWNbc1icLDWQRMoZQKn9dA2IU6bvcRX0mKtYC"
+						},
+						"url": {
+							"raw": "http://root:s3cr3t@localhost:8888/decrypt",
+							"protocol": "http",
+							"auth": {
+								"user": "root",
+								"password": "s3cr3t"
+							},
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"decrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "encrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "pass"
+						},
+						"url": {
+							"raw": "http://root:s3cr3t@localhost:8888/encrypt",
+							"protocol": "http",
+							"auth": {
+								"user": "root",
+								"password": "s3cr3t"
+							},
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"encrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "config-client/development",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://root:s3cr3t@localhost:8888/config-client/development",
+							"protocol": "http",
+							"auth": {
+								"user": "root",
+								"password": "s3cr3t"
+							},
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"config-client",
+								"development"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://root:s3cr3t@localhost:8888/actuator/health",
+							"protocol": "http",
+							"auth": {
+								"user": "root",
+								"password": "s3cr3t"
+							},
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "client-refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/actuator/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "client-request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/whoami/Mr_Pink",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"whoami",
+								"Mr_Pink"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
