@@ -1,0 +1,7 @@
+FROM openjdk:11.0-jdk
+
+ARG JAR_FILE=server/target/server-*.jar
+
+COPY ${JAR_FILE} config-server.jar
+ENV SPRING_APPLICATION_JSON='{"server":{"port":8888},"spring":{"security":{"user":{"name":"root","password":"s3cr3t"}},"cloud":{"config":{"server":{"git":{"uri":"/config-repo","clone-on-start":true}}}}}}'
+ENTRYPOINT ["java", "-jar", "config-server.jar"]

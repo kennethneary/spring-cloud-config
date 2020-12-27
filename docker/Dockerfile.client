@@ -1,0 +1,11 @@
+FROM openjdk:11.0-jdk
+
+ARG JAR_FILE=client/target/client-*.jar
+
+RUN apt-get update
+RUN apt-get install netcat -y
+
+COPY docker/config-client-entrypoint.sh /config-client-entrypoint.sh
+COPY ${JAR_FILE} config-client.jar
+
+RUN chmod 755 /config-client-entrypoint.sh
